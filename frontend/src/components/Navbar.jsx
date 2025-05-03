@@ -14,19 +14,19 @@ const Navbar = () => {
         <ul className='hidden md:flex items-start gap-5 font-medium'>
             <NavLink to='/'>
                 <li className='py-1'>Home</li>
-                <hr className='border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto hiddden' />
+                <hr className='hidden border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto ' />
             </NavLink>
             <NavLink to='/Doctors'>
                 <li className='py-1'>ALL DOCTORS</li>
-                <hr className='border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto hiddden' />
+                <hr className='hidden border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto ' />
             </NavLink>
             <NavLink to='/About'>
                 <li className='py-1'>ABOUT</li>
-                <hr className='border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto hiddden' />
+                <hr className='hidden border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto ' />
             </NavLink>
             <NavLink to='/Contact'>
                 <li className='py-1'>CONTACT</li>
-                <hr className='border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto hiddden' />
+                <hr className='hidden border-none outline-none h-0.5 bg-[#5f6fff] w-3/5 m-auto ' />
             </NavLink>
         </ul>
         <div className='flex items-center gap-4'>
