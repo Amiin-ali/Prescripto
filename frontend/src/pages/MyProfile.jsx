@@ -7,7 +7,10 @@ const MyProfile = () => {
     image: assets.profile_pic,
     email: "amiinali29@email.com",
     phone: '+252 61000000',
-    address: "deyniile, mogadishu, somalia",
+    address: {
+      line1:"57th cross, richmond",
+      line2:"circle, london"
+    },
     gender: "male",
     dob: "2004-06-01"
   })
@@ -33,10 +36,18 @@ const MyProfile = () => {
               : <p className='text-blue-400'>{userData.phone}</p>
           }
           <p className='font-medium'>Address:</p>
+          
           {
             isEdit
-              ? <input type="text" value={userData.address} onChange={e => setUserData(prev => ({ ...prev, address: e.target.value }))} />
-              : <p className='bg-gray-50'>{userData.address}</p>
+              ?  <p>
+                <input onChange={(e) => setUserData(prev => ({ ...prev, address: {...prev, address, line1: e.target.value}}))} value={userData.address.line1} type="text" />
+                <br />
+                <input onChange={(e) => setUserData(prev => ({ ...prev, address: {...prev, address, line2: e.target.value}}))} value={userData.address.line2} type="text" />
+              </p>
+              : <p className='bg-gray-50'>{userData.address.line1}
+              <br />
+              {userData.address.line2}
+              </p>
           }
           <div>
             <p className='text-neutral-500 underline mt-3'>BASIC_INFORMATION</p>
